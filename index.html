@@ -1,1 +1,35 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+<body>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+  <main>
+    <section id="search-section">
+      <form id="search-form">
+        <input type="text" id="city-input" placeholder="Enter a city name">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+    <section id="current-weather-section">
+      <h2 id="city-name"></h2>
+      <div id="current-weather"></div>
+    </section>
+    <section id="forecast-section">
+      <h2>5-Day Forecast</h2>
+      <div id="forecast"></div>
+    </section>
+    <section id="search-history-section">
+      <h2>Search History</h2>
+      <ul id="search-history"></ul>
+    </section>
+  </main>
+  
+  <script src="./assets/script.js"></script>
+</body>
+</html>
