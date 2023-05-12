@@ -1,35 +1,135 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://openweathermap.org/img/wn/01d.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <title>WeatherNow</title>
-  <link rel="stylesheet" type="text/css" href="./assets/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Weather Dashboard</h1>
+  <header class="hero is-dark is-bold is-primary">
+    <div class="hero-body">
+      <h1 class="title is-size-1 has-text-centered has-text-light">WeatherNow</h1>
+    </div>
   </header>
-  <main>
-    <section id="search-section">
-      <form id="search-form">
-        <input type="text" id="city-input" placeholder="Enter a city name">
-        <button type="submit">Search</button>
+
+  <main class="columns is-flex-wrap-wrap">
+    <section class="column is-12-mobile is-6-tablet is-4-desktop p-3" id="searchBarContainer">
+      <h2 class="subtitle is-uppercase">Search for a City</h2>
+      <form id="user-form" class="card mb-5">
+        <div class="card-content">
+          <div class="field">
+            <div class="control">
+              <input name="city" id="cityEl" class="input" type="text" placeholder="Enter city" autofocus>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary" type="button" id="searchEl">Search</button>
+            </div>
+          </div>
+        </div>
       </form>
+      <ul id="savedEl" class="mb-5">
+      </ul>
     </section>
-    <section id="current-weather-section">
-      <h2 id="city-name"></h2>
-      <div id="current-weather"></div>
-    </section>
-    <section id="forecast-section">
-      <h2>5-Day Forecast</h2>
-      <div id="forecast"></div>
-    </section>
-    <section id="search-history-section">
-      <h2>Search History</h2>
-      <ul id="search-history"></ul>
+    <section class="column is-12-mobile is-6-tablet is-8-desktop p-3" id="infoEl">
+      <div class="box mb-5">
+        <h2 class="is-size-3 has-text-uppercase" id="currentCityDate"></h2>
+        <div class="columns">
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="imgToday">
+                  <p class="weatherF" id="today"></p>
+                  <p class="tempValue" id="todayTemp"></p>
+                  <p class="windValue" id="todayWind"></p>
+                  <p class="humidityValue" id="todayHumid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h2 class="is-size-4">5-Day Forecast:</h2>
+        <div class="columns is-multiline">
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="img1">
+                  <p class="weatherF" id="day1"></p>
+                  <p class="tempValue" id="day1Temp"></p>
+                  <p class="windValue" id="day1Wind"></p>
+                  <p class="humidityValue" id="day1Humid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="img2">
+                  <p class="weatherF" id="day2"></p>
+                  <p class="tempValue" id="day2Temp"></p>
+                  <p class="windValue" id="day2Wind"></p>
+                  <p class="humidityValue" id="day2Humid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="img3">
+                  <p class="weatherF" id="day3"></p>
+                  <p class="tempValue" id="day3Temp"></p>
+                  <p class="windValue" id="day3Wind"></p>
+                  <p class="humidityValue" id="day3Humid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="img4">
+                  <p class="weatherF" id="day4"></p>
+                  <p class="tempValue" id="day4Temp"></p>
+                  <p class="windValue" id="day4Wind"></p>
+                  <p class="humidityValue" id="day4Humid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-4-desktop">
+            <div class="card">
+              <div class="card-content">
+                <div class="content">
+                  <img id="img5">
+                  <p class="weatherF" id="day5"></p>
+                  <p class="tempValue" id="day5Temp"></p>
+                  <p class="windValue" id="day5Wind"></p>
+                  <p class="humidityValue" id="day5Humid"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
-  
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"></script>
   <script src="./assets/script.js"></script>
 </body>
+
 </html>
