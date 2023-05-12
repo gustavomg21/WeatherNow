@@ -32,6 +32,5 @@ Please refer to the LICENSE in the repo.
 
 
 ## Deployed aplication
-https://gustavomg21.github.io/weathernow/
-
+https://gustavomg21.github.io/WeatherNow/
 
